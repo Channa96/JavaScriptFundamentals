@@ -1,0 +1,14 @@
+const productPrices = [120, 45, 75, 30, 60, 25, 90];
+
+// Apply a 10% discount to all prices
+const discountedPrices = productPrices.map(price => price * 0.9);
+
+// Filter products priced below $50
+const affordableProducts = discountedPrices.filter(price => price < 50);
+
+// Calculate the total cost of all affordable products
+const totalAffordableCost = affordableProducts.reduce((sum, price) => sum + price, 0);
+
+console.log("Discounted Prices:", discountedPrices);
+console.log("Affordable Products:", affordableProducts);
+console.log("Total Affordable Cost:", totalAffordableCost);
